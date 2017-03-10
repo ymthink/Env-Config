@@ -17,9 +17,25 @@ set scrolloff=10
 set hls
 set spell
 set ic
-winpos 0 0
-set lines=100
-set columns=92
+"解决中文乱码问题
+set fenc=chinese
+
+ "处理文本中显示乱码
+ set encoding=utf-8
+ set fileencodings=utf-8,chinese,latin-1
+ if has("win32")
+ set fileencoding=chinese
+ else
+ set fileencoding=utf-8
+endif
+
+ "处理菜单及右键菜单乱码
+ source $VIMRUNTIME/delmenu.vim
+ source $VIMRUNTIME/menu.vim
+   
+"处理consle输出乱码
+ language messages zh_CN.utf-8
+"中文乱码结束
 
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
@@ -72,4 +88,6 @@ function MyDiff()
   endif
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
-
+winpos 0 0
+set lines=100
+set columns=92
