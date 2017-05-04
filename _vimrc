@@ -1,6 +1,8 @@
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 set nobackup
+set noundofile
+set noswapfile
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
 set guifont=Consolas:h11
@@ -17,10 +19,10 @@ set scrolloff=10
 set hls
 set spell
 set ic
-"è§£å†³ä¸­æ–‡ä¹±ç é—®é¢˜
+"½â¾öÖĞÎÄÂÒÂëÎÊÌâ
 set fenc=chinese
 
- "å¤„ç†æ–‡æœ¬ä¸­æ˜¾ç¤ºä¹±ç 
+ "´¦ÀíÎÄ±¾ÖĞÏÔÊ¾ÂÒÂë
  set encoding=utf-8
  set fileencodings=utf-8,chinese,latin-1
  if has("win32")
@@ -29,13 +31,13 @@ set fenc=chinese
  set fileencoding=utf-8
 endif
 
- "å¤„ç†èœå•åŠå³é”®èœå•ä¹±ç 
+ "´¦Àí²Ëµ¥¼°ÓÒ¼ü²Ëµ¥ÂÒÂë
  source $VIMRUNTIME/delmenu.vim
  source $VIMRUNTIME/menu.vim
    
-"å¤„ç†consleè¾“å‡ºä¹±ç 
+"´¦ÀíconsleÊä³öÂÒÂë
  language messages zh_CN.utf-8
-"ä¸­æ–‡ä¹±ç ç»“æŸ
+"ÖĞÎÄÂÒÂë½áÊø
 
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
