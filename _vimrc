@@ -19,10 +19,20 @@ set scrolloff=10
 set hls
 set spell
 set ic
-"½â¾öÖĞÎÄÂÒÂëÎÊÌâ
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4|
+    \ set softtabstop=4|
+    \ set shiftwidth=4|
+    \ set textwidth=79|
+    \ set expandtab|
+    \ set autoindent|
+    \ set fileformat=unix|
+
+"è§£å†³ä¸­æ–‡ä¹±ç é—®é¢˜
 set fenc=chinese
 
- "´¦ÀíÎÄ±¾ÖĞÏÔÊ¾ÂÒÂë
+ "å¤„ç†æ–‡æœ¬ä¸­æ˜¾ç¤ºä¹±ç 
  set encoding=utf-8
  set fileencodings=utf-8,chinese,latin-1
  if has("win32")
@@ -31,13 +41,13 @@ set fenc=chinese
  set fileencoding=utf-8
 endif
 
- "´¦Àí²Ëµ¥¼°ÓÒ¼ü²Ëµ¥ÂÒÂë
+ "å¤„ç†èœå•åŠå³é”®èœå•ä¹±ç 
  source $VIMRUNTIME/delmenu.vim
  source $VIMRUNTIME/menu.vim
    
-"´¦ÀíconsleÊä³öÂÒÂë
+"å¤„ç†consleè¾“å‡ºä¹±ç 
  language messages zh_CN.utf-8
-"ÖĞÎÄÂÒÂë½áÊø
+"ä¸­æ–‡ä¹±ç ç»“æŸ
 
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
