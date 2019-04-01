@@ -3,8 +3,6 @@ source $VIMRUNTIME/vimrc_example.vim
 set nobackup
 set noundofile
 set noswapfile
-"source $VIMRUNTIME/mswin.vim
-"behave mswin
 set guifont=Consolas:h11
 colorscheme desert
 set nu
